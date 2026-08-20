@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Sign in — Beam</title>
+<title>Sign in — Assemble</title>
 <style>body{background:#0e1116;color:#e8edf4;font:16px -apple-system,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}.card{text-align:center;padding:24px}</style>
 </head>
 <body>
-<div class="card"><h2>Sign in to Beam</h2><div id="btn"></div><p id="msg" style="color:#8b96a5"></p></div>
+<div class="card"><h2>Sign in to Assemble</h2><div id="btn"></div><p id="msg" style="color:#8b96a5"></p></div>
 <script src="https://accounts.google.com/gsi/client" async></script>
 <script>
-// Stable-origin sign-in bridge: the Beam server's address rotates, but this
+// Stable-origin sign-in bridge: the Assemble server's address rotates, but this
 // page's origin never changes, so it is the registered OAuth origin. The
-// Google credential goes back to the opening Beam window via postMessage.
+// Google credential goes back to the opening Assemble window via postMessage.
 const q = new URLSearchParams(location.search);
 const cid = q.get('cid');
 const origin = q.get('origin');

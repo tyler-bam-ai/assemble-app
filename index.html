@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beam</title>
+<title>Assemble</title>
 <style>
   body { background:#0e1116; color:#e8edf4; font:16px -apple-system,sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
   .card { text-align:center; max-width:420px; padding:24px; }
@@ -13,13 +13,13 @@
 </head>
 <body>
 <div class="card">
-  <h1>Beam</h1>
+  <h1>Assemble</h1>
   <p id="msg">Connecting you to the meeting…</p>
   <p class="dim" id="sub"></p>
 </div>
 <script>
-// Stable Beam link: forwards to wherever the Beam server currently lives.
-// Path rides in the hash: https://…/beam-app/#/r/room-code
+// Stable Assemble link: forwards to wherever the Assemble server currently lives.
+// Path rides in the hash: https://…/assemble-app/#/r/room-code
 (async () => {
   const target = location.hash.slice(1) || '/';
   try {
@@ -31,9 +31,9 @@
     location.replace(dest);
   } catch (e) {
     document.getElementById('msg').innerHTML =
-      'The Beam server looks offline right now.<br>Try again in a minute, or get the app:';
+      'The Assemble server looks offline right now.<br>Try again in a minute, or get the app:';
     document.getElementById('sub').innerHTML =
-      '<a href="https://github.com/tyler-bam-ai/beam-app">github.com/tyler-bam-ai/beam-app</a>';
+      '<a href="https://github.com/tyler-bam-ai/assemble-app">github.com/tyler-bam-ai/assemble-app</a>';
   }
 })();
 </script>
